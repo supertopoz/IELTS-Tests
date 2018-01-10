@@ -41,12 +41,6 @@ function getHTML(){
 }
 
 
-
-
-
-
-
-
 var changeHandler = function() {                        
 	var fs = window.fullScreenApi.isFullScreen();
 	console.log("f" + (fs ? 'yes' : 'no'));
@@ -54,6 +48,9 @@ var changeHandler = function() {
 		//    alert("In fullscreen, I should do something here");                  
 	} else {
 		disableEditor();
+		$('.content').hide();
+		$('#warning').hide();
+		$('#loading').show();
 		getHTML()
 	}
 }
