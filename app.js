@@ -25,11 +25,14 @@ $(document).on('click','#save-button', () => {
 
 function disableEditor(){
 	tinymce.settings = $.extend(tinymce.settings, { readonly: 1 });
-	tinymce.EditorManager.editors.forEach(function (editor) {
-	tinymce.EditorManager.execCommand('mceRemoveEditor', false, editor.id);
-	//tinymce.EditorManager.editors = [];
-	tinymce.EditorManager.execCommand('mceAddEditor', false, editor.id);
-});
+	tinymce.settings = $.extend(tinymce.settings, { readonly: 1 });
+
+	//tinymce.EditorManager.editors.forEach(function (editor) {
+	tinymce.EditorManager.execCommand('mceRemoveEditor', false, 'myarea1');
+	tinymce.EditorManager.execCommand('mceRemoveEditor', false, 'myarea2');
+	tinymce.EditorManager.execCommand('mceAddEditor', false, 'myarea1');
+	tinymce.EditorManager.execCommand('mceAddEditor', false, 'myarea2');
+//}//);
 }
 
 function getHTML(){
@@ -47,10 +50,8 @@ var changeHandler = function() {
 	if (fs) {
 		//    alert("In fullscreen, I should do something here");                  
 	} else {
+
 		disableEditor();
-		$('.content').hide();
-		$('#warning').hide();
-		$('#loading').show();
 		getHTML()
 	}
 }
