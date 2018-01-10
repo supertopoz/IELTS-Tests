@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>IELT Writing</title>
+  <meta name="viewport" content="width=device-width">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+  <script src="http://cdn.tinymce.com/4/tinymce.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script>
+    tinymce.init({selector:'textarea'});
+  </script>
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="main-head">
+      <h1>
+        ILA IELTS WRITING TEST
+      </h1>
+      <span id="warning">
+      Warning! - Once you start this test do not exit the full screen. Doing so will submit the test as complete. 
+      Please click the save button when you are done. 
+      </span>
+      <br>
+      <div id="link"></div>
+      <button id="start-button">Start</button>
+      <div id="saved">Your test has been saved! Thank you and have a nice day!</div>
+    </header>
+    <article class="content">
+    
+      <h1>WRITING TASK 1 </h1>
+      <p>You should spend about 20 minutes on this task</p>
+      <P><b>The graph below shows radio and television audiances throughout the day in 1992. Write a report 
+            for a university lecturer describing the information shown below.</b>
+      </p>
+      <figure>
+        <picture style="display:flex; align:center">
+          <source media="(min-width: 1000px)" srcset="https://lh4.googleusercontent.com/YpiCISzeBu7WngBVguq3im67raETy7I4ACByYVTbTBbBlIQYPPTg0KqVHD9R8LTwXXjUyMF9ewJabfcBHHPY81jZIqEu3IdLDiAltjEDHKtrp4nXcXtKVo5O1VNMYXHFol9SSNzd" />
+          <source media="(min-width: 775px)" srcset="https://lh4.googleusercontent.com/dmGV7ME52hC4trsXxCAC-5imuN_LNl1GYFCVA96atUvd7G6JazNa669LscaY6HixqYHN9xxraPuMFXFFrT-xtfpGGbC4p9kwUbdZWSmKFrwvAd7_1gwrVQcjLrX45EDe23o06cy_" />
+          <img src="https://lh3.googleusercontent.com/hqfP-0h4K-qn6jutUe04Wx0b64xUalGb64HRs-OKJDo4oX2yYlxS1cqVAzYrg-mRMoihdjZYEFjfdHUcEHFkfNBc8dbfiWAaqEJLUJ57iSiUlRKv2HaKuTEgFMVoSsK_pgxodrNH" alt="Horses in Hawaii">
+        </picture>
+        <figcaption>Fig. 1.2</figcaption>
+      </figure>
+      <p>Write at least 150 words</p>
+      <textarea id="myarea1" class="text" style="width:100%; height:200px;"></textarea>
+      <h1>WRITING TASK 2 </h1>
+      <p>You should spend about 40 minutes on this task.
+        <br> Write about the following topic:
+      </p>
+      <b>
+      <p>Lack of fresh water is becoming a global issue of increasing importance</p>
+      <p>What problem does this shortage cause? </p>
+      <p>What measure could be taken to overcome these problems?</p>
+      </b>
+      <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience</p>
+      <p>Write at least 250 words</p>
+      <textarea id="myarea2" class="text" style="width:100%; height:200px;"></textarea>
+      <button id="save-button">Save</button>
+    </article>
+  </div>
+</body>
+
+</html>
