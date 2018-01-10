@@ -2,6 +2,7 @@ $('document').ready(() => {
 	console.log('working')
 	$('.content').hide();
 	$('#saved').hide();
+	$('#loading').hide();
 })
 $(document).on('click','#start-button',() => {
  	toggleFullScreen()
@@ -12,9 +13,11 @@ $(document).on('click','#start-button',() => {
 $(document).on('click','#save-button', () => {
   toggleFullScreen()
   getHTML()
+
 	$('.content').hide();
-	$('#warning').hide();
-	$('#saved').show();
+	$('#warning').hide();	
+	$('#loading').show();
+
 })
 
 function disableEditor(){
@@ -55,6 +58,8 @@ const createDoc = (html) => {
    axios.get("https://script.google.com/macros/s/" + secondScriptID + "/exec?html=" + data).then((response)=>{
      console.log(response.data)
      let id = response.data;
+     $('#saved').show();
+     $('#loading').hide();
      $('#link').append('<a target="_blank" href="https://drive.google.com/open?id='+ id + '" > Open Google Document</a>')
    }).catch(error =>{
      console.log(error)
