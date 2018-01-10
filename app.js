@@ -10,7 +10,8 @@ $(document).on('click','#start-button',() => {
 	$('#start-button').hide()
 
 })
-$(document).on('click','#save-button', () => {
+
+function saveProcess(){
   toggleFullScreen()
   getHTML()
 
@@ -18,6 +19,10 @@ $(document).on('click','#save-button', () => {
 	$('#warning').hide();	
 	$('#loading').show();
 
+}
+
+$(document).on('click','#save-button', () => {
+    saveProcess()
 })
 
 function disableEditor(){
@@ -180,7 +185,8 @@ var changeHandler = function() {
 	if (fs) {
 		//    alert("In fullscreen, I should do something here");                  
 	} else {
-		disableEditor()
+		disableEditor();
+		saveProcess();
 		//          $('#warning').hide();  
 		//          $('#saved').show();  
 	}
