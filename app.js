@@ -3,11 +3,16 @@ $('document').ready(() => {
 	$('.content').hide();
 	$('#saved').hide();
 	$('#loading').hide();
+	$('#second-message').hide();
+	$('#warning2').hide();
 })
 $(document).on('click','#start-button',() => {
  	toggleFullScreen()
 	$('.content').show('slow');
 	$('#start-button').hide()
+	$('#first-message').hide()
+	$('#second-message').show(100)
+
 
 })
 
@@ -50,7 +55,8 @@ var changeHandler = function() {
 	if (fs) {
 		//    alert("In fullscreen, I should do something here");                  
 	} else {
-
+        $('#warning2').show();
+        $('#warning1').hide();
 		disableEditor();
 		getHTML()
 	}

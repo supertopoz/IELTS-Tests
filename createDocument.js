@@ -8,6 +8,8 @@ const createDoc = (html) => {
      let id = response.data;
      $('#saved').show();
      $('#loading').hide();
+     $('#warning1').hide();
+     $('#warning2').hide();
      $('#link').append('<a target="_blank" href="https://drive.google.com/open?id='+ id + '" > Open Google Document</a>')
    }).catch(error =>{
      console.log(error)

@@ -21,20 +21,35 @@
 <body>
   <div class="wrapper">
     <header class="main-head">
-      <h1>
+
         ILA IELTS WRITING TEST
-      </h1>
+      
+     
+    </header>
+    <subheader class="sub-head">
+      <span id="first-message">
       <span id="warning">
-      Warning! - Once you start this test do not exit the full screen. Doing so will submit the test as complete. 
-      Please click the save button when you are done. 
+      Warning! - Once you start this test do not exit the full screen. 
       </span>
       <br>
-      
+      <br> 
+      When you are ready click the start button.
+      <br>
+      <br>      
       <button id="start-button">Start</button>
-      <div id="saved">Your test has been saved! Thank you and have a nice day!</div>
+      </span>
+      <span id="second-message">
+        <span id="warning1">
+          Do not exit the full screen
+        </span>  
+        <span id="warning2">
+          You existed full screen and now your work is being sent... 
+        </span>  
+      <div id="saved">
+     <br>
+      Your test has been saved! Thank you and have a nice day!</div>
       <div id="link"></div>
-      <div id="loading">Making Google Doc...</div>
-    </header>
+    </subheader>
     <article class="content">
     
       <h1>WRITING TASK 1 </h1>
@@ -64,6 +79,7 @@
       <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience</p>
       <p>Write at least 250 words</p>
       <textarea id="myarea2" class="text" style="width:100%; height:200px;"></textarea>
+      <br>
       <button id="save-button">Save</button>
     </article>
   </div>
