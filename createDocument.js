@@ -2,7 +2,7 @@ const createDoc = (html) => {
     return new Promise ((resolve,reject) => {    	
    let data =  encodeURIComponent(html)	
    console.log(data)
-   let secondScriptID = 'AKfycbzkbDNcuPHSciMiNN5YfXlNs9r1B1fR7Y4VGR9GaPFrJNqLLMg';
+   let secondScriptID = 'AKfycbzWjN3EqF6ERUJMJ0AnSvk9JAAp4XKS9KHPEKktBxiKM_LEAGee';
    axios.get("https://script.google.com/macros/s/" + secondScriptID + "/exec?html=" + data).then((response)=>{
      console.log(response.data)
      let id = response.data;
